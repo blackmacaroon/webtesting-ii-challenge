@@ -26,6 +26,38 @@ class App extends React.Component {
         </div>
       );
     }
+
+    onStrike = () => {
+      //if less than three, increase by one
+      //if three or higher, reset
+
+    }
+
+    onBall = () => {
+      //if less than 4, increase by one
+      //if four or higher, reset
+
+    }
+
+    onFoul = () => {
+      //if < 2, increase strikes by 1
+      //if 2 or more, return count at 2 strikes
+      
+    }
+
+    onHit = e => {
+      // assume on base, reset count to zero, next batter up
+      this.reset(e)
+    }
+
+    reset = e => {
+      // set the count back to zero, next batter up.
+      this.setState({
+        balls: 0,
+        strikes: 0
+      })
+    }
+
 }
 
 export default App;
