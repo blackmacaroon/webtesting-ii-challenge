@@ -14,8 +14,13 @@ class App extends React.Component {
       return (
         <div className="App">
           <header className='head'>
-            <Display banana={this.state}/>
-            <Dashboard />
+            <Display player={this.state.player} balls={this.state.balls} strikes={this.state.strikes}/>
+            <Dashboard 
+              onStrike = {this.onStrike}
+              onBall={this.onBall}
+              onFoul={this.onFoul}
+              onHit={this.onHit}
+            />
           </header>
           
         </div>
