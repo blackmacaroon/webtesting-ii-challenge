@@ -10,4 +10,10 @@ describe('<App />', () => {
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+
+
+  describe('onStrike', () => {
+    it('should increase by one when ')
+  })
+
 })

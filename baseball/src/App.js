@@ -27,20 +27,37 @@ class App extends React.Component {
       );
     }
 
-    onStrike = () => {
+    onStrike = e => {
       //if less than three, increase by one
+      if(this.state.strikes < 2){
+        this.setState(prevState => {
+          return {strikes: prevState.strikes + 1}
+        })
+      } else {
       //if three or higher, reset
-
+      this.reset(e)
+      }  
     }
 
-    onBall = () => {
+    onBall = e => {
       //if less than 4, increase by one
+      if(this.state.balls < 3){
+        this.setState(prevState => {
+          return {balls: prevState.balls + 1 }
+        })
+      } else {
       //if four or higher, reset
-
+      this.reset(e)
+      }  
     }
 
-    onFoul = () => {
+    onFoul = e => {
       //if < 2, increase strikes by 1
+      if(this.state.strikes < 2){
+        this.setState(prevState => {
+          return{strikes: prevState.strikes + 1}
+        })
+      }
       //if 2 or more, return count at 2 strikes
       
     }
