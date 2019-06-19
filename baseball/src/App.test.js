@@ -35,6 +35,7 @@ describe("<App />", () => {
       //click it
       fireEvent.click(button);
       //confirm
+      //    how now?
     });
   });
 
@@ -46,6 +47,7 @@ describe("<App />", () => {
       //click it
       fireEvent.click(button);
       //confirm
+      //    how now?
     });
   });
 
@@ -63,7 +65,7 @@ describe("<App />", () => {
   });
 
   describe('buttons', () => {
-    it('should contain the right text in the right order', () => {
+    it('should pull buttons from dashboard component and display them with the right text in the right order', () => {
        const { container } = render(<App />)
       //  console.log(container)
        const buttons = container.querySelectorAll('button')
